@@ -1,24 +1,24 @@
 package driver;
 
-public class IntegerStack extends DoublyLinkedList<Integer> implements iStack<Integer> {
+public class IntegerStack extends DoublyLinkedList<String> implements iStack<String> {
 
 	@Override
-	public void Push(Node<Integer> node) {
+	public void Push(Node<String> node) {
 		this.InsertAfter(this.Tail, node);
 	}
 
 	@Override
-	public Node<Integer> Pop() {
+	public Node<String> Pop() {
 		if (this.IsEmpty()) {
 			return null;
 		}
-		Node<Integer> ret = this.Tail;
+		Node<String> ret = this.Tail;
 		this.Remove(ret);
 		return ret;
 	}
 
 	@Override
-	public Node<Integer> Peek() {
+	public Node<String> Peek() {
 		return this.Tail;
 	}
 
